@@ -1,0 +1,46 @@
+
+// output led indicator
+NET "LEDG[0]" LOC = P12;
+NET "LEDG[1]" LOC = L9;
+NET "LEDG[2]" LOC = T10;
+// red output led indicator
+NET "LEDERR" LOC = M6;
+
+// clock input, PROG_CLOCK_INJECT
+NET "clk_40MHz" LOC = P9;
+
+//LED0 ---> P12
+//LED1 ---> L9
+
+//DEBUG header
+//DB0 R1
+//DB1 P1
+//DB2 N1
+//DB3 M1
+//DB4 J1
+//DB5 K1
+//DB6 J2
+//DB7 K2
+//DB8 P2
+//DB9 J3
+//DB10 R2
+//DB11 K3
+//DB12 J5
+//DB13 J4
+//...
+
+
+// Enable pin from on board osc (40 MHz)
+NET "en_prog_clock" LOC = P13;
+
+NET "UART_TX" LOC = P1;
+//NET "UART_TX" IOSTANDARD = LVCMOS33;
+
+NET "GND" LOC = N1;
+//NET "GND" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated IO constraints 
+
+NET "UART_TX" IOSTANDARD = LVCMOS33;
+NET "GND" IOSTANDARD = LVCMOS33;
+NET "UART_TX" SLEW = FAST;
